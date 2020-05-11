@@ -36,12 +36,12 @@ public class InventoryRegistry {
      * @param itemIdentifier The item identifier of the item.
      * @return DTO with information about an item with a corresponding item
      * identifier.
-     * @throws InvalidItemIdentifierException if the item does not exist.
+     * @throws ItemIdNotFoundException if the item does not exist.
      */
     public ItemDTO getItemFromInventoryRegistry(String itemIdentifier)
-            throws InvalidItemIdentifierException, DatabaseFailureException {
+            throws ItemIdNotFoundException, DatabaseFailureException {
         if(itemIdentifier.equals("999999")) {
-            throw new DatabaseFailureException("Could not connect to database");
+            throw new DatabaseFailureException("Unable to establish connection with database");
         }
         for (ItemData item : items) {
             if (item.itemIdentifier.equals(itemIdentifier)) {
@@ -49,7 +49,7 @@ public class InventoryRegistry {
                         item.itemName, item.itemDescription);
             }
         }
-        throw new InvalidItemIdentifierException(itemIdentifier);
+        throw new ItemIdNotFoundException(itemIdentifier);
     }
 
     /**

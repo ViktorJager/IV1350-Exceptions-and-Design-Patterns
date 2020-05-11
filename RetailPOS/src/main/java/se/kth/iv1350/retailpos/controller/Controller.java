@@ -4,7 +4,7 @@ import se.kth.iv1350.retailpos.integration.AccountingSystem;
 import se.kth.iv1350.retailpos.integration.DatabaseFailureException;
 import se.kth.iv1350.retailpos.integration.ExternalSystemsCreator;
 import se.kth.iv1350.retailpos.integration.InventoryRegistry;
-import se.kth.iv1350.retailpos.integration.InvalidItemIdentifierException;
+import se.kth.iv1350.retailpos.integration.ItemIdNotFoundException;
 import se.kth.iv1350.retailpos.integration.Printer;
 import se.kth.iv1350.retailpos.integration.ItemDTO;
 import se.kth.iv1350.retailpos.model.Amount;
@@ -49,18 +49,18 @@ public class Controller {
      *
      * @param itemIdentifier The identification number of the item.
      * @return currSaleInfo Information about the ongoing sale.
-     * @throws InvalidItemIdentifierException If item does not exist.
+     * @throws ItemIdNotFoundException If item does not exist.
      * @throws OperationFailedException If unable to register item for any other
      * reason than item id not being valid.
      */
     public RunningTotalDTO registerItem(String itemIdentifier)
-            throws InvalidItemIdentifierException, OperationFailedException {
+            throws ItemIdNotFoundException, OperationFailedException {
         try {
             ItemDTO itemDTO = inventoryRegistry.getItemFromInventoryRegistry(itemIdentifier);
             RunningTotalDTO currSaleInfo = sale.registerItemInSale(itemDTO);
             return currSaleInfo;
         } catch (DatabaseFailureException dbExc) {
-            throw new OperationFailedException("Could not register item", dbExc);
+            throw new OperationFailedException("Database connection error", dbExc);
         }
     }
 

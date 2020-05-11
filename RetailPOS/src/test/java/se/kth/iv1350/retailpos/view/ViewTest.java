@@ -1,6 +1,7 @@
 package se.kth.iv1350.retailpos.view;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +20,7 @@ public class ViewTest {
     private PrintStream originalSysOut;
     
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws IOException {
         creator = new ExternalSystemsCreator();
         printer = new Printer();
         Controller contr = new Controller(creator, printer);

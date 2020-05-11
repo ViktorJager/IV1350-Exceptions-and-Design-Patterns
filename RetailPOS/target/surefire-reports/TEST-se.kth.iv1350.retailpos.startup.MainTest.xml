@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="se.kth.iv1350.retailpos.model.AmountTest" time="0.022" tests="17" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="se.kth.iv1350.retailpos.startup.MainTest" time="0.028" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -57,21 +57,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testNotEqual" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
-  <testcase name="testEqual" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testMinus" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
-  <testcase name="testPlus" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.003"/>
-  <testcase name="toStringZeroAmt" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
-  <testcase name="toStringNegAmt" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="toStringPosAmt" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testMinusNegResult" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testPlusNegResult" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testNotEqualsJavaLangObject" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testNotEqualUsingNoArgConstr" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testMultiplyDouble" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testEqualNoArgConstr" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
-  <testcase name="testMinusZeroResultNegOperand" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.001"/>
-  <testcase name="testNotEqualsNull" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0.007"/>
-  <testcase name="testMultiply" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
-  <testcase name="testPlusZeroResultNegOperand" classname="se.kth.iv1350.retailpos.model.AmountTest" time="0"/>
+  <testcase name="testUIHasStarted" classname="se.kth.iv1350.retailpos.startup.MainTest" time="0.028"/>
 </testsuite>

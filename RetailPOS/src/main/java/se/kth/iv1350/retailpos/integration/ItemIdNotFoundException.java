@@ -4,7 +4,7 @@ package se.kth.iv1350.retailpos.integration;
  * This exception is thrown when an invalid item identifier is searched for in 
  * the InventoryRegistry.
  */
-public class InvalidItemIdentifierException extends Exception {
+public class ItemIdNotFoundException extends Exception {
     private String invalidItemIdentifier;
     
     /**
@@ -13,7 +13,7 @@ public class InvalidItemIdentifierException extends Exception {
      * 
      * @param invalidItemIdentifier The item with an invalid identifier.
      */
-    public InvalidItemIdentifierException(String invalidItemIdentifier) {
+    public ItemIdNotFoundException(String invalidItemIdentifier) {
         super("Invalid item identifier. Item with identifier '" 
                 + invalidItemIdentifier + "' does not exist.");
         this.invalidItemIdentifier = invalidItemIdentifier;

@@ -1,0 +1,18 @@
+11 May 2020, 22:18:55, Exception thrown: Database connection error
+se.kth.iv1350.retailpos.controller.OperationFailedException: Database connection error
+	at se.kth.iv1350.retailpos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.iv1350.retailpos.view.View.runFakeExecution(View.java:54)
+	at se.kth.iv1350.retailpos.startup.Main.main(Main.java:30)
+Caused by: se.kth.iv1350.retailpos.integration.DatabaseFailureException: Unable to establish connection with database
+	at se.kth.iv1350.retailpos.integration.InventoryRegistry.getItemFromInventoryRegistry(InventoryRegistry.java:44)
+	at se.kth.iv1350.retailpos.controller.Controller.registerItem(Controller.java:59)
+	... 2 more
+11 May 2020, 22:18:55, Exception thrown: Database connection error
+se.kth.iv1350.retailpos.controller.OperationFailedException: Database connection error
+	at se.kth.iv1350.retailpos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.iv1350.retailpos.view.View.runFakeExecution(View.java:54)
+	at se.kth.iv1350.retailpos.startup.Main.main(Main.java:30)
+Caused by: se.kth.iv1350.retailpos.integration.DatabaseFailureException: Unable to establish connection with database
+	at se.kth.iv1350.retailpos.integration.InventoryRegistry.getItemFromInventoryRegistry(InventoryRegistry.java:44)
+	at se.kth.iv1350.retailpos.controller.Controller.registerItem(Controller.java:59)
+	... 2 more

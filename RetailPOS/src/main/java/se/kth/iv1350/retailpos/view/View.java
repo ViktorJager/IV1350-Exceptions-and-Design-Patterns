@@ -1,13 +1,15 @@
 package se.kth.iv1350.retailpos.view;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import se.kth.iv1350.retailpos.controller.Controller;
 import se.kth.iv1350.retailpos.controller.OperationFailedException;
-import se.kth.iv1350.retailpos.integration.InvalidItemIdentifierException;
+import se.kth.iv1350.retailpos.integration.ItemIdNotFoundException;
 import se.kth.iv1350.retailpos.model.Amount;
 import se.kth.iv1350.retailpos.model.RunningTotalDTO;
+import se.kth.iv1350.retailpos.util.LogHandler;
 
 /**
  * This is a placeholder for the real view. It contains a hardcoded execution
@@ -16,15 +18,19 @@ import se.kth.iv1350.retailpos.model.RunningTotalDTO;
 public class View {
 
     private Controller contr;
+    private LogHandler logger;
+    private ErrorMessageHandler errorMsgHandler = new ErrorMessageHandler();
 
     /**
      * Creates a new instance, that uses the specified controller for all calls
      * to other layers.
      *
      * @param contr The controller to use for all calls to other layers.
+     * @throws IOException
      */
-    public View(Controller contr) {
+    public View(Controller contr) throws IOException {
         this.contr = contr;
+        this.logger = new LogHandler();
     }
 
     /**
@@ -34,19 +40,9 @@ public class View {
         RunningTotalDTO currSaleInfo;
         List<String> items = new ArrayList<String>() {
             {
-                add("555555");
-                add("999999");
-                add("111111");
-                add("222222");
-                add("555555");
-                add("123");
-                add("333333");
-                add("444444");
-                add("4");
-                add("444444");
-                add("666666");
-                add("666666");
-                add("999");
+                add("555555"); add("999999"); add("111111"); add("999");
+                add("555555"); add("999999"); add("444444"); add("123");
+                add("444444"); add("666666"); add("666666"); add("4"); 
             }
         };
 
@@ -57,8 +53,10 @@ public class View {
             try {
                 currSaleInfo = contr.registerItem(item);
                 System.out.println(currSaleInfo.toString());
-            } catch (InvalidItemIdentifierException | OperationFailedException exc) {
-                System.out.println(exc.getMessage());
+            } catch (ItemIdNotFoundException exc) {
+                System.out.println("Invalid item identifier: '" + exc.getInvalidItemIdentifier() + "'");
+            } catch (OperationFailedException exc) {
+                handleException("Could not register item", exc);
             }
         }
 
@@ -100,7 +98,7 @@ public class View {
                     try {
                         currSaleInfo = contr.registerItem(itemIdentifier);
                         System.out.println(currSaleInfo.toString());
-                    } catch (InvalidItemIdentifierException | OperationFailedException exc) {
+                    } catch (ItemIdNotFoundException | OperationFailedException exc) {
                         System.out.println(exc.getMessage());
                     }
                     break;
@@ -125,5 +123,10 @@ public class View {
                     break;
             }
         } while (!choice.equals("x"));
+    }
+    
+    private void handleException(String msg, Exception exc) {
+        errorMsgHandler.showErrorMsg(msg);
+        logger.logException(exc);
     }
 }
