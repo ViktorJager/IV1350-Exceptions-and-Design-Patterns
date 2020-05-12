@@ -1,5 +1,7 @@
 package se.kth.iv1350.retailpos.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import se.kth.iv1350.retailpos.integration.AccountingSystem;
 import se.kth.iv1350.retailpos.integration.DatabaseFailureException;
 import se.kth.iv1350.retailpos.integration.ExternalSystemsCreator;
@@ -12,6 +14,7 @@ import se.kth.iv1350.retailpos.model.CashPayment;
 import se.kth.iv1350.retailpos.model.CashRegister;
 import se.kth.iv1350.retailpos.model.RunningTotalDTO;
 import se.kth.iv1350.retailpos.model.Sale;
+import se.kth.iv1350.retailpos.model.SaleObserver;
 
 /**
  * This is the application's only controller. All calls to the model pass
@@ -24,6 +27,7 @@ public class Controller {
     private AccountingSystem accountingSystem;
     private CashRegister cashReg;
     private Printer printer;
+    private List<SaleObserver> saleObservers = new ArrayList<>();
 
     public Controller(ExternalSystemsCreator creator, Printer printer) {
         this.inventoryRegistry = creator.getInventoryRegistry();
@@ -39,6 +43,7 @@ public class Controller {
      */
     public void startSale() {
         sale = new Sale();
+        sale.addSaleObservers(saleObservers);
     }
 
     /**
@@ -64,6 +69,22 @@ public class Controller {
         }
     }
 
+    /**
+     * The specified observer will be notified when a sale has been paid for.
+     * There will be notifications only for sale that are started after this
+     * method is called.
+     *
+     * @param obs The observer to notify.
+     */
+    public void addSaleObserver(SaleObserver obs) {
+        saleObservers.add(obs);
+    }
+
+    /**
+     * Ends the current sale.
+     * 
+     * @return Total price for the sale with tax included.
+     */
     public Amount endSale() {
         return sale.getTotalPriceTaxIncluded();
     }

@@ -1,8 +1,12 @@
-se\kth\iv1350\retailpos\integration\ItemDTO.class
 se\kth\iv1350\retailpos\model\Sale.class
-se\kth\iv1350\retailpos\model\CashRegister.class
-se\kth\iv1350\retailpos\integration\InvalidItemIdentifierException.class
 se\kth\iv1350\retailpos\model\Receipt.class
+se\kth\iv1350\retailpos\view\View.class
+se\kth\iv1350\retailpos\integration\AccountingSystem.class
+se\kth\iv1350\retailpos\integration\DatabaseFailureException.class
+se\kth\iv1350\retailpos\util\LogHandler.class
+se\kth\iv1350\retailpos\model\Amount.class
+se\kth\iv1350\retailpos\integration\ItemDTO.class
+se\kth\iv1350\retailpos\model\CashRegister.class
 se\kth\iv1350\retailpos\view\View$1.class
 se\kth\iv1350\retailpos\controller\Controller.class
 se\kth\iv1350\retailpos\integration\InventoryRegistry.class
@@ -12,11 +16,6 @@ se\kth\iv1350\retailpos\model\StoreInfo.class
 se\kth\iv1350\retailpos\model\CashPayment.class
 se\kth\iv1350\retailpos\integration\InventoryRegistry$ItemData.class
 se\kth\iv1350\retailpos\model\Item.class
-se\kth\iv1350\retailpos\view\View.class
-se\kth\iv1350\retailpos\integration\AccountingSystem.class
 se\kth\iv1350\retailpos\view\ErrorMessageHandler.class
 se\kth\iv1350\retailpos\integration\ExternalSystemsCreator.class
-se\kth\iv1350\retailpos\integration\DatabaseFailureException.class
-se\kth\iv1350\retailpos\util\LogHandler.class
-se\kth\iv1350\retailpos\model\Amount.class
 se\kth\iv1350\retailpos\model\RunningTotalDTO.class

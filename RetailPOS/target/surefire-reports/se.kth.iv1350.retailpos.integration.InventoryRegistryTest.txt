@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: se.kth.iv1350.retailpos.integration.InventoryRegistryTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in se.kth.iv1350.retailpos.integration.InventoryRegistryTest
-testGetItemFromRegistryNotExisting  Time elapsed: 0.001 s  <<< ERROR!
-se.kth.iv1350.retailpos.integration.InvalidItemIdentifierException: Invalid item identifier. Item with identifier '888888' does not exist.
-	at se.kth.iv1350.retailpos.integration.InventoryRegistryTest.testGetItemFromRegistryNotExisting(InventoryRegistryTest.java:25)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in se.kth.iv1350.retailpos.integration.InventoryRegistryTest

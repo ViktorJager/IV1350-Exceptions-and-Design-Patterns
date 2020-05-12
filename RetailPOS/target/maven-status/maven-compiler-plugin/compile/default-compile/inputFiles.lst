@@ -1,3 +1,4 @@
+C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\view\TotalRevenueView.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\controller\OperationFailedException.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\Amount.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\CashRegister.java
@@ -6,7 +7,7 @@ C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Pattern
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\Receipt.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\InventoryRegistry.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\CashPayment.java
-C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\InvalidItemIdentifierException.java
+C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\ItemIdNotFoundException.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\ExternalSystemsCreator.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\StoreInfo.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\Sale.java
@@ -15,6 +16,7 @@ C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Pattern
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\DatabaseFailureException.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\RunningTotalDTO.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\integration\ItemDTO.java
+C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\SaleObserver.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\controller\Controller.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\view\ErrorMessageHandler.java
 C:\Users\Viktor\Documents\OOD_Projects\sem4\IV1350-Exceptions-and-Design-Patterns\RetailPOS\src\main\java\se\kth\iv1350\retailpos\model\Item.java

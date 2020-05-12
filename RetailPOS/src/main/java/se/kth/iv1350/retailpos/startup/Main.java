@@ -31,7 +31,6 @@ public class Main {
             //view.runIOProgram();
         } catch (IOException ex) {
             System.out.println("Unable to start the application");
-            //ex.printStackTrace();
         } 
     }
 }

@@ -30,6 +30,7 @@ public class View {
      */
     public View(Controller contr) throws IOException {
         this.contr = contr;
+        contr.addSaleObserver(new TotalRevenueView());
         this.logger = new LogHandler();
     }
 

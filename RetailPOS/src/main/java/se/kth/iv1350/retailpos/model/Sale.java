@@ -17,6 +17,7 @@ public class Sale {
     private Amount totalPriceTaxIncluded = new Amount(0);
     private List<Item> itemsInSale = new ArrayList<>();
     private CashPayment payment;
+    private List <SaleObserver>  saleObservers = new ArrayList<>();
     
     /**
      * Creates a new instance and saves the time of this sale.
@@ -144,6 +145,34 @@ public class Sale {
     public void pay(CashPayment payment) {
         payment.calculateTotalCost(this);
         this.payment = payment;
+        notifyObservers();
+    }
+    
+    /**
+     * Notifies all observers the total amount paid for the sale.
+     */
+    private void notifyObservers() {
+        for(SaleObserver obs : saleObservers) {
+            obs.newPayment(payment.getTotalCost());
+        }
+    }
+    
+    /**
+     * The observers will be notified when this sale has been completed.
+     * 
+     * @param obs The observer to notify.
+     */
+    public void addSaleObserver(SaleObserver obs) {
+        saleObservers.add(obs);
+    }
+    
+    /**
+     * All the observers will be notified when this sale has been completed.
+     * 
+     * @param observers The observers to notify. 
+     */
+    public void addSaleObservers(List<SaleObserver> observers) {
+        saleObservers.addAll(observers);
     }
     
     /**

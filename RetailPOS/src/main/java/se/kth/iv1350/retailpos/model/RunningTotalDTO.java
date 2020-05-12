@@ -44,6 +44,7 @@ public class RunningTotalDTO {
         return builder.toString();
     }
     
+    
     /**
      * Get the value of price
      *
