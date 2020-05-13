@@ -42,8 +42,10 @@ public class TotalRevenueView implements SaleObserver {
      * Prints the total amount of 'revenue' since the program started.
      */
     private void printCurrentState() {
-        System.out.print("***** Total amount for all completed sales: ");
-        System.out.println(totalRevenue + " *****");
+        System.out.print("***** ");
+        System.out.print("Total amount for all completed sales: ");
+        System.out.print(totalRevenue);
+        System.out.println(" *****");
     }
     
 }

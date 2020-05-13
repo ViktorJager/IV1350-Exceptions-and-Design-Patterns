@@ -7,7 +7,7 @@ public class OperationFailedException extends Exception {
     /**
      * Creates an instance with the message and the cause.
      *
-     * @param message   The message for the exception.
+     * @param message The message for the exception.
      * @param cause The exception that caused this exception.
      */
     public OperationFailedException(String message, Exception cause) {

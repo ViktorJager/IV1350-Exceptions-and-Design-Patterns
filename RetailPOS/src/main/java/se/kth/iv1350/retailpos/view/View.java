@@ -41,9 +41,18 @@ public class View {
         RunningTotalDTO currSaleInfo;
         List<String> items = new ArrayList<String>() {
             {
-                add("555555"); add("999999"); add("111111"); add("999");
-                add("555555"); add("999999"); add("444444"); add("123");
-                add("444444"); add("666666"); add("666666"); add("4"); 
+                add("555555");
+                add("999999");
+                add("111111");
+                add("999");
+                add("555555");
+                add("999999");
+                add("444444");
+                add("123");
+                add("444444");
+                add("666666");
+                add("666666");
+                add("4");
             }
         };
 
@@ -99,8 +108,10 @@ public class View {
                     try {
                         currSaleInfo = contr.registerItem(itemIdentifier);
                         System.out.println(currSaleInfo.toString());
-                    } catch (ItemIdNotFoundException | OperationFailedException exc) {
-                        System.out.println(exc.getMessage());
+                    } catch (ItemIdNotFoundException exc) {
+                        System.out.println("Invalid item identifier: '" + exc.getInvalidItemIdentifier() + "'");
+                    } catch (OperationFailedException exc) {
+                        handleException("Could not register item", exc);
                     }
                     break;
 
@@ -125,7 +136,7 @@ public class View {
             }
         } while (!choice.equals("x"));
     }
-    
+
     private void handleException(String msg, Exception exc) {
         errorMsgHandler.showErrorMsg(msg);
         logger.logException(exc);

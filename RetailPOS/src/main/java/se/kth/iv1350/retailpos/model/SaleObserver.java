@@ -2,7 +2,7 @@ package se.kth.iv1350.retailpos.model;
 
 /**
  * Listener interface for receiving notifications about completed sales. 
- * When a sale is completed, the observing objects are notified.
+ * When a sale is completed, the observers are notified.
  */
 public interface SaleObserver {
     /**

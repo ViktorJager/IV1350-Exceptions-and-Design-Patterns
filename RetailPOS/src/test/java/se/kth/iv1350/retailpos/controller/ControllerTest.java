@@ -59,7 +59,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testRegisterNotExistingItem() throws
+    public void testRegisterNonExistingItem() throws
             ItemIdNotFoundException, OperationFailedException {
 
         String itemIdentifier = "123456";
@@ -69,7 +69,7 @@ public class ControllerTest {
         } catch (ItemIdNotFoundException exc) {
             assertTrue(exc.getInvalidItemIdentifier().contains(itemIdentifier));
         } catch (OperationFailedException exc) {
-            exc.printStackTrace();
+            fail("Failed to catch 'ItemIdNotFoundException'");
         }
     }
 
@@ -79,13 +79,13 @@ public class ControllerTest {
 
         // ID to force a No DB Connection Exception
         String itemIdentifier = "999999";
-
         try {
             RunningTotalDTO result = contr.registerItem(itemIdentifier);
             fail("Could register item while no connection to database");
         } catch (OperationFailedException exc) {
             assertTrue(exc.getMessage().contains("Database connection error"));
+        } catch (ItemIdNotFoundException exc) {
+            fail("Existing item not found");
         }
     }
-
 }
